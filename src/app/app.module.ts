@@ -7,6 +7,7 @@ import { TableProductComponent } from './pages/products/table-product/table-prod
 import { HeaderComponent } from './components/header/header.component';
 import { AddComponent } from './pages/products/add/add.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,7 +18,8 @@ import { FooterComponent } from './components/footer/footer.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
