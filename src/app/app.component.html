@@ -1,10 +1,21 @@
 <app-header></app-header>
+
+<app-hello [data]="myName"></app-hello>
+
 <button (click)="onHandleClick()" class="btn btn-primary">Turn on/off</button>
 
-<form action="" class="form">
+<!-- <form action="" class="form">
     <label for="" class="d-block">NgModel</label>
     <input type="text" [(ngModel)]="title" class="form-control" name="name">
     <input type="text" class="form-control" value='{{title}}'>
+</form> -->
+
+<form action="">
+    <label for="" class="d-block">Name</label>
+    <input type="text" name="name" class="form-control">
+    <label for="" class="d-block">Price</label>
+    <input type="text" name="price" class="form-control">
+    <button class="btn btn-primary" (click)="onHandleAdd($event)">Add</button>
 </form>
 
 <table class="table" *ngIf="productStatus">

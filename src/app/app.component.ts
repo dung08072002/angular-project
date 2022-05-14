@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  myName = "Dungnvph17931";
   title = "abcxyz";
   productStatus: boolean = true;
   productList: { id: number, name: string, price: number, status: boolean }[] = [
@@ -32,5 +33,8 @@ export class AppComponent {
   onHandleKeyPress(event : any){
     console.log(event.target.value)
     this.title = event.target.value
+  }
+  onHandleAdd(event : any){
+    console.log(event.target.name)
   }
 }

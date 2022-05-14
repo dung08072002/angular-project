@@ -8,13 +8,15 @@ import { HeaderComponent } from './components/header/header.component';
 import { AddComponent } from './pages/products/add/add.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { FormsModule } from '@angular/forms';
+import { HelloComponent } from './components/hello/hello.component';
 @NgModule({
   declarations: [
     AppComponent,
     TableProductComponent,
     HeaderComponent,
     AddComponent,
-    FooterComponent
+    FooterComponent,
+    HelloComponent
   ],
   imports: [
     BrowserModule,
