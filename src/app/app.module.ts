@@ -9,6 +9,7 @@ import { AddComponent } from './pages/products/add/add.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { FormsModule } from '@angular/forms';
 import { HelloComponent } from './components/hello/hello.component';
+import { ProductDetailComponent } from './components/product-detail/product-detail.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,7 +17,8 @@ import { HelloComponent } from './components/hello/hello.component';
     HeaderComponent,
     AddComponent,
     FooterComponent,
-    HelloComponent
+    HelloComponent,
+    ProductDetailComponent
   ],
   imports: [
     BrowserModule,

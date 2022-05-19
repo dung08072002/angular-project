@@ -1,42 +1,23 @@
 <app-header></app-header>
+<app-table-product></app-table-product>
+<app-add></app-add>
+<router-outlet></router-outlet>
+<app-footer></app-footer>
 
-<app-hello [data]="myName"></app-hello>
-
-<button (click)="onHandleClick()" class="btn btn-primary">Turn on/off</button>
-
+<!-- <app-hello [data]="myName"></app-hello> -->
+<!-- <button (click)="onHandleClick()" class="btn btn-primary">Turn on/off</button> -->
 <!-- <form action="" class="form">
     <label for="" class="d-block">NgModel</label>
     <input type="text" [(ngModel)]="title" class="form-control" name="name">
     <input type="text" class="form-control" value='{{title}}'>
 </form> -->
-
+<!-- 
 <form action="">
     <label for="" class="d-block">Name</label>
     <input type="text" name="name" class="form-control">
     <label for="" class="d-block">Price</label>
     <input type="text" name="price" class="form-control">
     <button class="btn btn-primary" (click)="onHandleAdd($event)">Add</button>
-</form>
-
-<table class="table" *ngIf="productStatus">
-    <thead>
-        <tr>
-            <th>#</th>
-            <th>Name</th>
-            <th>Price</th>
-            <th>Status</th>
-            <th>Action</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let product of productList, let i = index">
-            <td>{{i+1}}</td>
-            <td>{{product.name}}</td>
-            <td>{{product.price}}</td>
-            <td>{{product.status ? "Còn hàng" : "Hết hàng"}}</td>
-            <td><button (click)="onHandleDelete(product.id)" class="btn btn-danger">Delete</button></td>
-        </tr>
-    </tbody>
-</table>
-<router-outlet></router-outlet>
-<app-footer></app-footer>
+</form> -->
+<!-- <app-table-product [data]="productList"></app-table-product> -->
+<!-- <app-add (onAdd)="onHandleAdd($event)"></app-add> -->

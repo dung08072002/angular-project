@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import mockData from 'src/data';
+import { IProduct } from './models/product';
 
 @Component({
   selector: 'app-root',
@@ -6,35 +8,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  myName = "Dungnvph17931";
-  title = "abcxyz";
-  productStatus: boolean = true;
-  productList: { id: number, name: string, price: number, status: boolean }[] = [
-    {
-      id: 1,
-      name: "Product A",
-      price: 1000,
-      status: true,
-    },
-    {
-      id: 2,
-      name: "Product B",
-      price: 2000,
-      status: false,
-    }
-  ]
-  onHandleClick() {
-    this.productStatus = !this.productStatus
-  }
-  onHandleDelete(idProduct: any){
-    console.log(idProduct)
-    this.productList = this.productList.filter(product => product.id !== idProduct);
-  }
-  onHandleKeyPress(event : any){
-    console.log(event.target.value)
-    this.title = event.target.value
-  }
-  onHandleAdd(event : any){
-    console.log(event.target.name)
+  productList: IProduct[] = mockData;
+  onHandleAdd(product: any) {
+    console.log('prduct', product);
+    this.productList.push(product);
   }
 }
