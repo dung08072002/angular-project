@@ -1,12 +1,16 @@
 {
     "products": [
         {
-            "name": "Iphone 13 Pro",
-            "price": 1000
+            "id": 1,
+            "name": "product A updated",
+            "price": 200,
+            "status": false
         },
         {
-            "name": "Iphone 13 Pro Max",
-            "price": 2000
+            "id": 2,
+            "name": "product B",
+            "price": 300,
+            "status": true
         }
     ]
 }

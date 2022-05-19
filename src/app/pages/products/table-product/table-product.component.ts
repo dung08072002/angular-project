@@ -7,12 +7,19 @@ import { ProductService } from '../../../services/product.service';
   styleUrls: ['./table-product.component.css']
 })
 export class TableProductComponent implements OnInit {
-  productList!: IProduct[];
+  productList!: any;
+  
   constructor(private productService: ProductService) {
-    this.productList = this.productService.getProducts()
+    this.showProducts();
   }
 
   ngOnInit(): void {
+  }
+
+  showProducts() {
+    this.productService.getProducts().subscribe(data => {
+      this.productList = data;
+    })
   }
 
 }

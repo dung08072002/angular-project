@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
-import mockData from 'src/data';
-
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -8,29 +7,28 @@ import mockData from 'src/data';
 
 export class ProductService {
 
-  myName = "dungnvph17931";
+  API_URL: string = 'http://localhost:4201/products';
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
-  getProduct(id : number){
-    return mockData.find(item => item.id == +id)
+  getProduct(id: number) {
+    return this.http.get(`${this.API_URL}/${id}`);
   }
 
-  getProducts(){
-    return mockData;
+  getProducts() {
+    return this.http.get(this.API_URL)
   }
 
-  removeProduct(){
+  removeProduct() {
 
   }
 
-  addProduct(product : any){
-    return mockData.push(product)
+  addProduct(product: any) {
   }
 
-  updateProduct(){
+  updateProduct() {
 
   }
-  
+
 
 }
