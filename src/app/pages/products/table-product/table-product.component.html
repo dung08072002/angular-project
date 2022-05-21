@@ -15,8 +15,8 @@
       <td>{{product.price}}</td>
       <td>{{product.status ? "Còn hàng" : "Hết hàng"}}</td>
       <td>
-        <!-- <button (click)="onHandleDelete(product.id)" class="btn btn-danger">Delete</button> -->
-        <!-- <button (click)="onHandleShowDetail(product.id)" class="btn btn-info">Show</button> -->
+        <button routerLink="/product/{{product.id}}" class="btn btn-info">Detail</button>
+        <button (click)="onRemoveItem(product.id)" class="btn btn-danger">Delete</button>
       </td>
     </tr>
   </tbody>

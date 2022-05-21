@@ -8,13 +8,15 @@ import { ProductService } from '../../services/product.service';
   styleUrls: ['./product-detail.component.css']
 })
 export class ProductDetailComponent implements OnInit {
-  productDetail!: IProduct | any
+  productDetail!: IProduct
   constructor(
     private router: ActivatedRoute,
     private productService: ProductService
   ) {
     const id = this.router.snapshot.paramMap.get('id')!;
-    this.productService.getProduct(+id).subscribe(data => this.productDetail = data)
+    this.productService.getProduct(+id).subscribe(data => {
+      this.productDetail = data
+    })
   }
 
   ngOnInit(): void {

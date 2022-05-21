@@ -7,7 +7,7 @@ import { ProductService } from '../../../services/product.service';
   styleUrls: ['./table-product.component.css']
 })
 export class TableProductComponent implements OnInit {
-  productList!: any;
+  productList!: IProduct[];
   
   constructor(private productService: ProductService) {
     this.showProducts();
@@ -20,6 +20,13 @@ export class TableProductComponent implements OnInit {
     this.productService.getProducts().subscribe(data => {
       this.productList = data;
     })
+  }
+
+  onRemoveItem(id:number){
+    this.productService.removeProduct(id).subscribe(() => {
+      this.productList = this.productList.filter(item => item.id !== id)
+    })
+
   }
 
 }
