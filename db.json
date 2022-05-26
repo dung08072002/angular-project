@@ -2,9 +2,21 @@
   "products": [
     {
       "id": 1,
-      "name": "product A updated",
+      "name": "product A updated lần 2",
       "price": 200,
       "status": false
+    },
+    {
+      "id": 2,
+      "name": "Product B",
+      "price": 1000,
+      "status": true
+    },
+    {
+      "id": 3,
+      "name": "Product C",
+      "price": 3000,
+      "status": true
     }
   ]
 }

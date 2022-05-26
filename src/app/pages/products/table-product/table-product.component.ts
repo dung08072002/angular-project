@@ -8,7 +8,7 @@ import { ProductService } from '../../../services/product.service';
 })
 export class TableProductComponent implements OnInit {
   productList!: IProduct[];
-  
+
   constructor(private productService: ProductService) {
     this.showProducts();
   }
@@ -22,9 +22,12 @@ export class TableProductComponent implements OnInit {
     })
   }
 
-  onRemoveItem(id:number){
+  onRemoveItem(id: number) {
+    const confirm = window.confirm("Do you want to remove this product !");
     this.productService.removeProduct(id).subscribe(() => {
-      this.productList = this.productList.filter(item => item.id !== id)
+      if (confirm) {
+        this.productList = this.productList.filter(item => item.id !== id)
+      }
     })
 
   }

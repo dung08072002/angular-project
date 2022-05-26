@@ -1,5 +1,5 @@
 {{product | json}}
-<button routerLink="/products">Back to list</button>
+
 <form action="" (ngSubmit)="onSubmit()">
     <input type="text" [(ngModel)]="product.name" placeholder="name" name="name">
     <input type="number" [(ngModel)]="product.price" placeholder="price" name="price">
@@ -7,5 +7,5 @@
         <option [ngValue]="true">Còn hàng</option>
         <option [ngValue]="false">Hết hàng</option>
     </select>
-    <button class="btn btn-primary">Submit</button>
+    <button class="btn btn-primary">Add</button>
 </form>

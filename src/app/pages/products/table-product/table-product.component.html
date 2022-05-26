@@ -1,3 +1,4 @@
+<button routerLink="/product/add">Add</button>
 <table class="table">
   <thead>
     <tr>
@@ -15,7 +16,8 @@
       <td>{{product.price}}</td>
       <td>{{product.status ? "Còn hàng" : "Hết hàng"}}</td>
       <td>
-        <button routerLink="/product/{{product.id}}" class="btn btn-info">Detail</button>
+        <button routerLink="/product/{{product.id}}" class="text-white btn btn-info">Detail</button>
+        <button routerLink="/product/edit/{{product.id}}" class="btn btn-primary">Edit</button>
         <button (click)="onRemoveItem(product.id)" class="btn btn-danger">Delete</button>
       </td>
     </tr>
