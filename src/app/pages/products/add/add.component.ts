@@ -20,7 +20,7 @@ export class AddComponent implements OnInit {
 
   ngOnInit(): void {
     const id = +this.activateRoute.snapshot.paramMap.get('id')!;
-    if(id){
+    if (id) {
       this.productService.getProduct(+id).subscribe(data => {
         this.product = data
       })
@@ -28,7 +28,13 @@ export class AddComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log(this.product)
+    // console.log(this.product)
+    const id = +this.activateRoute.snapshot.paramMap.get('id')!;
+    if (id) {
+      this.productService.updateProduct(this.product).subscribe(data => {
+        this.router.navigate(['/products']);
+      });
+    }
     this.productService.addProduct(this.product).subscribe(data => {
       this.router.navigate(['/products']);
     })

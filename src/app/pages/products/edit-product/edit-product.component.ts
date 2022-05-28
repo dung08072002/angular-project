@@ -28,7 +28,7 @@ export class EditProductComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log(this.product);
+    // console.log(this.product);
     this.productService.updateProduct(this.product).subscribe(data => {
       this.router.navigate(['/products']);
     });
