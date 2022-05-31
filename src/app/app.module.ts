@@ -12,6 +12,8 @@ import { FormsModule } from '@angular/forms';
 import { HelloComponent } from './components/hello/hello.component';
 import { ProductDetailComponent } from './components/product-detail/product-detail.component';
 import { EditProductComponent } from './pages/products/edit-product/edit-product.component';
+import { SignInComponent } from './components/sign-in/sign-in.component';
+import { SignUpComponent } from './components/sign-up/sign-up.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +23,9 @@ import { EditProductComponent } from './pages/products/edit-product/edit-product
     FooterComponent,
     HelloComponent,
     ProductDetailComponent,
-    EditProductComponent
+    EditProductComponent,
+    SignInComponent,
+    SignUpComponent,
   ],
   imports: [
     BrowserModule,

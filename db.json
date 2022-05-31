@@ -18,5 +18,13 @@
       "price": 3000,
       "status": true
     }
+  ],
+  "users": [
+    {
+      "email": "dungnv.forwork@gmail.com",
+      "password": "$2a$10$UcSxXCW82EBXHhxfAST8nugJqxnvrB72OF2aatOk6YocQhsg1Iy0m",
+      "username": "dungnv",
+      "id": 1
+    }
   ]
 }
