@@ -1,8 +1,8 @@
-{{user | json}}
+<!-- {{user | json}} -->
 
 <form action="" (ngSubmit)="onSubmit()">
     <label for="">Username</label>
-    <input [(ngModel)]="user.username" type="text" name="username">
+    <input [(ngModel)]="user.username" type="text" name="username" autocomplete="off">
     <label for="">Email</label>
     <input [(ngModel)]="user.email" type="email" name="email">
     <label for="">Password</label>

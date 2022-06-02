@@ -4,16 +4,20 @@ import { ProductDetailComponent } from './components/product-detail/product-deta
 import { SignInComponent } from './components/sign-in/sign-in.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { AddComponent } from './pages/products/add/add.component';
-import { EditProductComponent } from './pages/products/edit-product/edit-product.component';
 import { TableProductComponent } from './pages/products/table-product/table-product.component';
+import { AdminGuard } from './services/admin.guard';
 
 const routes: Routes = [
-  { path: "products", component: TableProductComponent },
-  { path: "product/add", component: AddComponent },
-  { path: "product/:id", component: ProductDetailComponent },
-  { path: "product/edit/:id", component: AddComponent},
-  { path: "signin", component: SignInComponent},
-  { path: "signup", component: SignUpComponent},
+  { path: "signin", component: SignInComponent },
+  { path: "signup", component: SignUpComponent },
+  {
+    path: "products",canActivate: [AdminGuard], children: [
+      { path: "", redirectTo: 'list', pathMatch: 'full' },
+      { path: "list", component: TableProductComponent },
+      { path: "add", component: AddComponent },
+      { path: "edit/:id", component: AddComponent },
+    ]
+  },
 ];
 
 @NgModule({

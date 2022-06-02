@@ -23,7 +23,7 @@ export class SignInComponent implements OnInit {
   }
   onSubmit(){
     this.userService.signIn(this.userSignIn).subscribe(data => {
-      console.log(data);
+      // console.log(data);
       if(data){
         localStorage.setItem("user", JSON.stringify(data));
         this.router.navigate(['/']);

@@ -24,7 +24,15 @@
       "email": "dungnv.forwork@gmail.com",
       "password": "$2a$10$UcSxXCW82EBXHhxfAST8nugJqxnvrB72OF2aatOk6YocQhsg1Iy0m",
       "username": "dungnv",
-      "id": 1
+      "id": 1,
+      "role": 1
+    },
+    {
+      "email": "dungnvph17931@fpt.edu.vn",
+      "password": "$2a$10$AfgQVfJeaFbMJg6./5MC0OxGh6YqJDBuAjbf3YSZlYvRVdU.wOyn.",
+      "username": "DungNV",
+      "id": 2,
+      "role": 0
     }
   ]
 }
